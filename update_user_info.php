@@ -59,8 +59,8 @@ class update_user_info {
      */
     public function VerifyUserAuthentication($reg_no, $password) {
 
-        $stmt = $this->conn->prepare("SELECT first_name, last_name, reg_no, email, encrypted_password, salt, gender
-             FROM android_php_post WHERE reg_no = ?");
+        $stmt = $this->conn->prepare("SELECT first_name, last_name, reg_no, email, 
+        encrypted_password, salt, gender FROM android_php_post WHERE reg_no = ?");
 
         $stmt->bind_param("s", $reg_no);
 

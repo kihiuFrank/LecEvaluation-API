@@ -45,7 +45,7 @@ isset($_POST['password']) && isset($_POST['gender'])) {
      }
 } else {
     $response["error"] = TRUE;
-    $response["error_msg"] = "Required parameters (first_name, Last_name, reg_no, email or password) is missing!";
+    $response["error_msg"] = "Required parameters (first_name, last_name, reg_no, email or password) is missing!";
     echo json_encode($response);
 }
 ?>
