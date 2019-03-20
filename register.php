@@ -21,8 +21,8 @@ isset($_POST['password']) && isset($_POST['gender'])) {
     if ($db->CheckExistingUser($email,$reg_no)) {
         // user already exists
         $response["error"] = TRUE;
-        $response["error_msg"] = "Email already exists with " . $email;
-        $response["error_msg"] = "Reg-no already exists with " . $reg_no;
+        $response["error_msg"] = "User already exists with " . $email;
+        $response["error_msg"] = "User already exists with " . $reg_no;
         echo json_encode($response);
     } else {
         // create a new user
