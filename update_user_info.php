@@ -65,7 +65,7 @@ class update_user_info {
         $stmt->bind_param("s", $reg_no);
 
         if ($stmt->execute()) {
-            $stmt-> bind_result($token2,$token3,$token4,$token5,$token6,$token7,$token8);
+            $stmt->bind_result($token2,$token3,$token4,$token5,$token6,$token7,$token8);
 
             while ( $stmt-> fetch() ) {
                $user["first_name"] = $token2;
@@ -83,7 +83,7 @@ class update_user_info {
             $salt = $token7;
             $encrypted_password = $token6;
             $hash = $this->CheckHashFunction($salt, $password);
-            // check for password equality
+             //check for password equality
             if ($encrypted_password == $hash) {
                 // user authentication details are correct
                 return $user;

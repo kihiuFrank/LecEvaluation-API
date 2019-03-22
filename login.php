@@ -17,7 +17,7 @@ if (isset($_POST['reg_no']) && isset($_POST['password'])) {
     if ($user != false) {
         // use is found
         $response["error"] = FALSE;
-        $response["uid"] = $user["unique_id"];
+        $response["uid"] = $user["unique_id"]; //uniqid('ast');
         $response["user"]["first_name"] = $user["first_name"];
         $response["user"]["last_name"] = $user["last_name"];
         $response["user"]["reg_no"] = $user["reg_no"];
@@ -36,4 +36,4 @@ if (isset($_POST['reg_no']) && isset($_POST['password'])) {
     $response["error_msg"] = "Required parameters reg_no or password is missing!";
     echo json_encode($response);
 }
-?>
+?> 
